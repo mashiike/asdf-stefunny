@@ -4,7 +4,7 @@ set -euo pipefail
 
 GH_REPO="https://github.com/mashiike/stefunny"
 TOOL_NAME="stefunny"
-TOOL_TEST="stefunny --help"
+TOOL_TEST="stefunny version"
 
 fail() {
 	echo -e "asdf-$TOOL_NAME: $*"
@@ -56,7 +56,6 @@ install_version() {
 	fi
 
 	(
-        ls -la $ASDF_DOWNLOAD_PATH
 		mkdir -p "$install_path"
 		cp -r "$ASDF_DOWNLOAD_PATH"/stefunny "$install_path/"
 
