@@ -56,9 +56,9 @@ install_version() {
 	fi
 
 	(
-        echo "dump dump $ASDF_DOWNLOAD_PATH $install_path"
+        ls -la $ASDF_DOWNLOAD_PATH
 		mkdir -p "$install_path"
-		cp -r "$ASDF_DOWNLOAD_PATH"/stefunny "$install_path/bin/"
+		cp -r "$ASDF_DOWNLOAD_PATH"/stefunny "$install_path/"
 
 		local tool_cmd
 		tool_cmd="$(echo "$TOOL_TEST" | cut -d' ' -f1)"
