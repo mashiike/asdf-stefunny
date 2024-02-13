@@ -37,10 +37,10 @@ download_release() {
 	local version filename url os arch
 	version="$1"
 	filename="$2"
-    os="$3"
-    arch="$4"
+	os="$3"
+	arch="$4"
 
-    url="$GH_REPO/releases/download/v${version}/stefunny_${version}_${os}_${arch}.tar.gz"
+	url="$GH_REPO/releases/download/v${version}/stefunny_${version}_${os}_${arch}.tar.gz"
 
 	echo "* Downloading $TOOL_NAME release $version... from $url"
 	curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
